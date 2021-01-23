@@ -7,8 +7,12 @@
        git config --global user.name "Your Name"
        git config --global user.email "email@example.com"
     若需要连接远程仓库需要生成公钥和私钥,并把公钥放到远程仓库
-       ssh-keygen -r rsa -C "email@exampple.com" 
-   
+       ssh-keygen -t rsa -C "email@exampple.com" 
+     ssh : Secure Shell
+     -t :type 加密方式  rsa or dsa
+     -b 4096 : 密钥长度4096, rsa 默认2048
+     -C :comment,用来识别密钥的注释，可以非邮箱
+        
 ## 2 操作
 ### 2.1 创建一个本地仓库：
         mkdir myrepo  && cd myrepp && git init  # 本地新建一个空文件夹并进入其中并初始化为仓库
